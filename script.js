@@ -43,9 +43,6 @@ function initActiveNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section[id]');
     
-    // Debug: Log sections found
-    console.log('Sections found:', sections);
-    console.log('Nav links found:', navLinks);
     
     const navObserver = new IntersectionObserver((entries) => {
         let maxEntry = null;
@@ -61,7 +58,6 @@ function initActiveNavigation() {
         
         if (maxEntry) {
             const currentSection = maxEntry.target.id;
-            console.log('Active section:', currentSection);
             
             // Remove active class from all nav links
             navLinks.forEach(link => {
@@ -70,7 +66,6 @@ function initActiveNavigation() {
             
             // Add active class to corresponding nav link
             const activeLink = document.querySelector(`.nav-link[href="#${currentSection}"]`);
-            console.log('Active link found:', activeLink);
             if (activeLink) {
                 activeLink.classList.add('active');
             }
@@ -82,7 +77,6 @@ function initActiveNavigation() {
     
     sections.forEach(section => {
         navObserver.observe(section);
-        console.log('Observing section:', section.id);
     });
 }
 
@@ -356,10 +350,11 @@ function initDownloadCV() {
     downloadBtn.addEventListener('click', (e) => {
         e.preventDefault();
         
-        // Create download link
+        // Create download link that works with file:// protocol
         const link = document.createElement('a');
         link.href = './cv-yigit-kutay-gulben.pdf';
         link.download = 'Yigit-Kutay-Gulben-CV.pdf';
+        link.target = '_blank'; // Fallback for browsers that don't support download attribute
         link.style.display = 'none';
         
         // Add to DOM and trigger download
@@ -375,11 +370,24 @@ function initDownloadCV() {
 // Simple notification function
 function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
+    
+    let backgroundColor;
+    switch(type) {
+        case 'success':
+            backgroundColor = 'rgba(16, 185, 129, 0.9)';
+            break;
+        case 'error':
+            backgroundColor = 'rgba(239, 68, 68, 0.9)';
+            break;
+        default:
+            backgroundColor = 'rgba(99, 102, 241, 0.9)';
+    }
+    
     notification.style.cssText = `
         position: fixed;
         top: 100px;
         right: 20px;
-        background: ${type === 'success' ? 'rgba(16, 185, 129, 0.9)' : 'rgba(99, 102, 241, 0.9)'};
+        background: ${backgroundColor};
         color: white;
         padding: 1rem 1.5rem;
         border-radius: 8px;
