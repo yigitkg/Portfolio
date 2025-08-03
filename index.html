@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yiğit Kutay Gülben - Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="translations.js"></script>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon" id="logoIcon">
+                    <div class="logo-circle"></div>
+                    <span>YKG</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">
+                        <span class="nav-text" data-i18n="nav_home">Ana Sayfa</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">
+                        <span class="nav-text" data-i18n="nav_about">Hakkımda</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">
+                        <span class="nav-text" data-i18n="nav_experience">Deneyim</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">
+                        <span class="nav-text" data-i18n="nav_skills">Yetenekler</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">
+                        <span class="nav-text" data-i18n="nav_contact">İletişim</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </li>
+            </ul>
+            <div class="nav-right">
+                <div class="language-switcher">
+                    <button class="language-btn" id="languageBtn">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">TR</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <div class="language-option" data-lang="tr">
+                            <span class="flag">🇹🇷</span>
+                            <span>Türkçe</span>
+                        </div>
+                        <div class="language-option" data-lang="en">
+                            <span class="flag">🇬🇧</span>
+                            <span>English</span>
+                        </div>
+                        <div class="language-option" data-lang="de">
+                            <span class="flag">🇩🇪</span>
+                            <span>Deutsch</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span data-i18n="hero_badge">Software Engineer</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-line" data-i18n="hero_name_first">Yiğit Kutay</span>
+                        <span class="title-line highlight" data-i18n="hero_name_last">Gülben</span>
+                    </h1>
+                    <p class="hero-description" data-i18n="hero_description">
+                        Modern web teknolojileri ile yenilikçi çözümler geliştiren 
+                        tutkulu bir yazılım mühendisi. React.js, Java, TypeScript 
+                        ve daha fazlası ile geleceği şekillendiriyorum.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label" data-i18n="hero_stat_experience">Yıl Deneyim</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label" data-i18n="hero_stat_projects">Proje</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">8+</span>
+                            <span class="stat-label" data-i18n="hero_stat_technologies">Teknoloji</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">
+                            <span data-i18n="hero_btn_contact">Get In Touch</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#" class="btn btn-secondary" id="downloadCV">
+                            <i class="fas fa-download"></i>
+                            <span data-i18n="hero_btn_download">Download CV</span>
+                        </a>
+                    </div>
+                    <div class="hero-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>yigitkg@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+90 554 538 01 20</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="tech-sphere">
+                        <div class="profile-center">
+                            <img src="profile.jpg" alt="Yiğit Kutay Gülben" class="profile-image">
+                            <div class="profile-glow"></div>
+                        </div>
+                        <div class="sphere-container">
+                            <div class="tech-icon" data-tech="React">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="Java">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="TypeScript">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="Node.js">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="AWS">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="tech-icon" data-tech="Git">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge" data-i18n="about_badge">Hakkımda</div>
+                <h2 class="section-title"><span data-i18n="about_title">Yazılım Dünyasında</span> <span class="highlight" data-i18n="about_title_highlight">Yolculuğum</span></h2>
+                <p class="section-subtitle" data-i18n="about_subtitle">Bilkent Üniversitesi'nden mezun olduktan sonra, modern teknolojilerle geleceği şekillendiriyorum.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-cards">
+                    <div class="about-card education">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3 data-i18n="about_education_title">Eğitim</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="education-item">
+                                <div class="education-info">
+                                    <h4 data-i18n="about_education_degree">Bilgisayar Mühendisliği</h4>
+                                    <p data-i18n="about_education_university">İhsan Doğramacı Bilkent Üniversitesi</p>
+                                    <span class="year">2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-card languages">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3 data-i18n="about_languages_title">Diller</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="language-item">
+                                <div class="language-info">
+                                    <span data-i18n="about_language_english">İngilizce</span>
+                                    <span class="level" data-i18n="about_level_advanced">İleri Seviye</span>
+                                </div>
+                                <div class="language-bar">
+                                    <div class="language-fill" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="language-item">
+                                <div class="language-info">
+                                    <span data-i18n="about_language_japanese">Japonca</span>
+                                    <span class="level" data-i18n="about_level_beginner">Başlangıç</span>
+                                </div>
+                                <div class="language-bar">
+                                    <div class="language-fill" style="width: 25%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="highlight-content">
+                            <h4 data-i18n="about_highlight1_title">Modern Teknolojiler</h4>
+                            <p data-i18n="about_highlight1_desc">React.js, TypeScript, Java ve daha fazlası ile güçlü uygulamalar geliştiriyorum.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="highlight-content">
+                            <h4 data-i18n="about_highlight2_title">Performans Odaklı</h4>
+                            <p data-i18n="about_highlight2_desc">Optimizasyon ve performans her zaman önceliğim. Hızlı ve verimli çözümler üretiyorum.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="highlight-content">
+                            <h4 data-i18n="about_highlight3_title">Takım Çalışması</h4>
+                            <p data-i18n="about_highlight3_desc">Agile metodolojiler ile ekip çalışmasına değer veriyor ve liderlik ediyorum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge" data-i18n="experience_badge">Deneyim</div>
+                <h2 class="section-title"><span data-i18n="experience_title">Profesyonel</span> <span class="highlight" data-i18n="experience_title_highlight">Yolculuğum</span></h2>
+                <p class="section-subtitle" data-i18n="experience_subtitle">Farklı şirketlerde edindiğim deneyimler ve başarılar.</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="role-info">
+                                <h3 data-i18n="exp_kvk_role">Software Engineer</h3>
+                                <span class="company" data-i18n="exp_kvk_company">KVK Teknoloji Ürünleri</span>
+                            </div>
+                            <div class="timeline-period">
+                                <span data-i18n="exp_kvk_period">Mart 2024 - Günümüz</span>
+                            </div>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li data-i18n="exp_kvk_desc1">React.js, Node.js ve .NET MVC ile C# kullanarak ana projeler için mimari ve iş akışı tasarımı</li>
+                                <li data-i18n="exp_kvk_desc2">Teknoloji yığınları seçimi ve geliştirme ekibine liderlik</li>
+                                <li data-i18n="exp_kvk_desc3">NGINX ile Linux tabanlı dağıtımların yönetimi</li>
+                                <li data-i18n="exp_kvk_desc4">Performans optimizasyonu ve hata ayıklama</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="role-info">
+                                <h3 data-i18n="exp_ge_role">Software Engineer</h3>
+                                <span class="company" data-i18n="exp_ge_company">GE Vernova</span>
+                            </div>
+                            <div class="timeline-period">
+                                <span data-i18n="exp_ge_period">Eylül 2023 - Şubat 2024</span>
+                            </div>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li data-i18n="exp_ge_desc1">Modern web teknolojileri ile sağlam frontend uygulamaları geliştirme</li>
+                                <li data-i18n="exp_ge_desc2">Azure DevOps ile verimli versiyon kontrolü ve dağıtım</li>
+                                <li data-i18n="exp_ge_desc3">Kullanıcı odaklı yazılım çözümleri tasarımı</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="role-info">
+                                <h3 data-i18n="exp_azerion_role">Front-end Developer</h3>
+                                <span class="company" data-i18n="exp_azerion_company">Azerion</span>
+                            </div>
+                            <div class="timeline-period">
+                                <span data-i18n="exp_azerion_period">Haziran 2022 - Ocak 2023</span>
+                            </div>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li data-i18n="exp_azerion_desc1">JavaScript, TypeScript, React ve SCSS ile özel UI bileşenleri oluşturma</li>
+                                <li data-i18n="exp_azerion_desc2">Tasarım ekipleri ile işbirliği</li>
+                                <li data-i18n="exp_azerion_desc3">Kullanıcı deneyimi hedeflerini karşılama</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="role-info">
+                                <h3 data-i18n="exp_accenture_role">Front-end Developer</h3>
+                                <span class="company" data-i18n="exp_accenture_company">Accenture</span>
+                            </div>
+                            <div class="timeline-period">
+                                <span data-i18n="exp_accenture_period">Nisan 2021 - Mayıs 2022</span>
+                            </div>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li data-i18n="exp_accenture_desc1">Cargill Corp için AWS IoT SiteWise kullanarak proof-of-concept geliştirme</li>
+                                <li data-i18n="exp_accenture_desc2">EDF Energy için ödeme sistemi UI bileşenleri tasarımı</li>
+                                <li data-i18n="exp_accenture_desc3">Roche Pharmaceuticals için COVID test kiti veri analiz aracı</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge" data-i18n="skills_badge">Yetenekler</div>
+                <h2 class="section-title"><span data-i18n="skills_title">Teknoloji</span> <span class="highlight" data-i18n="skills_title_highlight">Yeteneklerim</span></h2>
+                <p class="section-subtitle" data-i18n="skills_subtitle">Modern web geliştirme araçları ve teknolojileri konusunda uzmanım.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 data-i18n="skills_frontend">Frontend</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="React.js">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span>React.js</span>
+                        </div>
+                        <div class="skill-item" data-skill="TypeScript">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="skill-item" data-skill="HTML/CSS">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <span>HTML/CSS</span>
+                        </div>
+                        <div class="skill-item" data-skill="SCSS">
+                            <div class="skill-icon">
+                                <i class="fab fa-sass"></i>
+                            </div>
+                            <span>SCSS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 data-i18n="skills_backend">Backend</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="Java">
+                            <div class="skill-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item" data-skill="C#">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span>C#</span>
+                        </div>
+                        <div class="skill-item" data-skill="Node.js">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 data-i18n="skills_tools">Araçlar & Metodolojiler</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="Agile">
+                            <div class="skill-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <span>Agile</span>
+                        </div>
+                        <div class="skill-item" data-skill="AWS">
+                            <div class="skill-icon">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <span>AWS</span>
+                        </div>
+                        <div class="skill-item" data-skill="Git">
+                            <div class="skill-icon">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge" data-i18n="contact_badge">İletişim</div>
+                <h2 class="section-title"><span data-i18n="contact_title">Benimle</span> <span class="highlight" data-i18n="contact_title_highlight">İletişime Geçin</span></h2>
+                <p class="section-subtitle" data-i18n="contact_subtitle">Projeleriniz için birlikte çalışalım.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4 data-i18n="contact_email">Email</h4>
+                            <p>yigitkg@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4 data-i18n="contact_phone">Telefon</h4>
+                            <p>+90 554 538 01 20</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4 data-i18n="contact_location">Konum</h4>
+                            <p data-i18n="contact_location_value">İstanbul, Türkiye</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/yigitkg" class="social-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yigitkutaygulben/" class="social-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:yigitkg@gmail.com" class="social-link" title="Email" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-section footer-about">
+                        <div class="footer-logo">
+                            <div class="logo-icon">
+                                <div class="logo-circle"></div>
+                                <span>YKG</span>
+                            </div>
+                        </div>
+                        <div class="footer-social">
+                            <a href="https://github.com/yigitkg" class="social-icon" title="GitHub" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/yigitkutaygulben/" class="social-icon" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:yigitkg@gmail.com" class="social-icon" title="Email" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section footer-contact">
+                        <h4 data-i18n="footer_contact">Get In Touch</h4>
+                        <div class="footer-contact-info">
+                            <div class="contact-detail">
+                                <i class="fas fa-envelope"></i>
+                                <span>yigitkg@gmail.com</span>
+                            </div>
+                            <div class="contact-detail">
+                                <i class="fas fa-phone"></i>
+                                <span>+90 554 538 01 20</span>
+                            </div>
+                            <div class="contact-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span data-i18n="contact_location_value">Istanbul, Turkey</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-credits">
+                        <p class="coffee-text" data-i18n="footer_coffee_text">
+                            ☕ Powered by coffee and countless debugging sessions
+                        </p>
+                        <div class="footer-info">
+                            <div class="footer-left">
+                                <p class="footer-text">
+                                    &copy; 2025 Yiğit Kutay Gülben. <span data-i18n="footer_rights">All rights reserved.</span>
+                                </p>
+                            </div>
+                            <div class="footer-tech">
+                                <span class="made-with-text" data-i18n="footer_made_with">Made with</span>
+                                <div class="tech-icons">
+                                    <div class="tech-item" title="HTML5">
+                                        <i class="fab fa-html5"></i>
+                                    </div>
+                                    <div class="tech-item" title="CSS3">
+                                        <i class="fab fa-css3-alt"></i>
+                                    </div>
+                                    <div class="tech-item" title="JavaScript">
+                                        <i class="fab fa-js"></i>
+                                    </div>
+                                    <div class="tech-item" title="Font Awesome">
+                                        <i class="fab fa-font-awesome"></i>
+                                    </div>
+                                    <div class="tech-item" title="Google Fonts">
+                                        <i class="fab fa-google"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html> 
