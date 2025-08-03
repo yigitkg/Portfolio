@@ -112,7 +112,7 @@ body {
     box-shadow: 0 6px 25px rgba(99, 102, 241, 0.4);
 }
 
-/* Animated Background */
+/* Animated Background - Optimized */
 .background-animation {
     position: fixed;
     top: 0;
@@ -121,14 +121,42 @@ body {
     height: 100%;
     z-index: -1;
     overflow: hidden;
+    will-change: auto;
 }
 
 .gradient-orb {
     position: absolute;
     border-radius: 50%;
     filter: blur(80px);
-    opacity: 0.3;
-    animation: float 20s ease-in-out infinite;
+    opacity: 0.2;
+    animation: float 30s ease-in-out infinite;
+    will-change: transform;
+}
+
+/* Reduce animations on devices that prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .gradient-orb {
+        animation: none;
+        opacity: 0.1;
+    }
+    
+    .profile-image {
+        animation: none;
+    }
+    
+    .tech-icon {
+        animation: none;
+    }
+    
+    .sphere-container {
+        animation: none;
+    }
+    
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 .orb-1 {
@@ -202,7 +230,8 @@ body {
     height: 80px;
     width: 100%;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: visible;
+    position: relative;
 }
 
 .nav-logo {
@@ -312,12 +341,23 @@ body {
     box-shadow: var(--glow-primary);
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: var(--text-primary);
 }
 
-.nav-link:hover .nav-indicator {
+.nav-link:hover .nav-indicator,
+.nav-link.active .nav-indicator {
     width: 100%;
+}
+
+.nav-link.active {
+    color: var(--primary);
+}
+
+.nav-link.active .nav-indicator {
+    background: var(--gradient-primary);
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
 }
 
 .hamburger {
@@ -395,6 +435,7 @@ body {
 .language-switcher {
     position: relative;
     z-index: 10001;
+    isolation: isolate;
 }
 
 .language-btn {
@@ -433,9 +474,9 @@ body {
 }
 
 .language-dropdown {
-    position: fixed;
-    top: 72px;
-    right: 2rem;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
     background: rgba(15, 15, 35, 0.95);
     border: 1px solid rgba(99, 102, 241, 0.3);
     border-radius: 8px;
@@ -445,14 +486,16 @@ body {
     visibility: hidden;
     transform: translateY(-10px);
     transition: var(--transition);
-    z-index: 99999;
+    z-index: 999999;
     min-width: 150px;
+    pointer-events: none;
 }
 
 .language-dropdown.active {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    pointer-events: auto;
 }
 
 .language-option {
@@ -468,7 +511,8 @@ body {
     font-size: 0.9rem;
     font-weight: 500;
     position: relative;
-    z-index: 10003;
+    z-index: 1000000;
+    pointer-events: auto;
 }
 
 .language-option:hover {
@@ -758,7 +802,8 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    animation: rotate 20s linear infinite;
+    animation: rotate 40s linear infinite;
+    will-change: transform;
 }
 
 @keyframes rotate {
@@ -1745,7 +1790,7 @@ body {
     }
     
     .language-dropdown {
-        right: 1rem;
+        right: 0;
         left: auto;
         min-width: 130px;
     }
@@ -1966,6 +2011,43 @@ body {
 
 .fade-in-right {
     animation: fadeInRight 0.8s ease-out;
+}
+
+/* Accessibility - Focus Indicators */
+*:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Custom focus styles for specific elements */
+.nav-link:focus,
+.btn:focus,
+.language-btn:focus,
+.hamburger:focus,
+.social-link:focus,
+.social-icon:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+/* Skip to main content link for screen readers */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 100000;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 6px;
 }
 
 /* Smooth Scrolling */

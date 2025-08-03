@@ -38,6 +38,54 @@ function initMobileNav() {
     });
 }
 
+// Active Navigation Tracking
+function initActiveNavigation() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id]');
+    
+    // Debug: Log sections found
+    console.log('Sections found:', sections);
+    console.log('Nav links found:', navLinks);
+    
+    const navObserver = new IntersectionObserver((entries) => {
+        let maxEntry = null;
+        let maxRatio = 0;
+        
+        // Find the section with the highest intersection ratio
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
+                maxRatio = entry.intersectionRatio;
+                maxEntry = entry;
+            }
+        });
+        
+        if (maxEntry) {
+            const currentSection = maxEntry.target.id;
+            console.log('Active section:', currentSection);
+            
+            // Remove active class from all nav links
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Add active class to corresponding nav link
+            const activeLink = document.querySelector(`.nav-link[href="#${currentSection}"]`);
+            console.log('Active link found:', activeLink);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        }
+    }, {
+        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
+        rootMargin: '-100px 0px -66% 0px'
+    });
+    
+    sections.forEach(section => {
+        navObserver.observe(section);
+        console.log('Observing section:', section.id);
+    });
+}
+
 // Scroll Animations
 function initScrollAnimations() {
     const observerOptions = {
@@ -365,11 +413,21 @@ function initLogoScrollToTop() {
     const logoIcon = document.getElementById('logoIcon');
     if (!logoIcon) return;
     
-    logoIcon.addEventListener('click', () => {
+    function scrollToTop() {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
+    }
+    
+    logoIcon.addEventListener('click', scrollToTop);
+    
+    // Add keyboard support
+    logoIcon.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            scrollToTop();
+        }
     });
 }
 
@@ -382,6 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize all features
     initSmoothScrolling();
     initMobileNav();
+    initActiveNavigation();
     initScrollAnimations();
     initTypingEffect();
     initTechSphere();
