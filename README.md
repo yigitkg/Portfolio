@@ -1,60 +1,79 @@
 # Yiğit Kutay Gülben - Portfolio
 
-Modern, animasyonlu ve fizik elementleri ile tasarlanmış kişisel portfolyo sayfası.
+Modern, animated personal portfolio website designed with physics elements and interactive features.
 
-## 🚀 Özellikler
+## 🚀 Features
 
-- **Modern Tasarım**: Gradient renkler ve modern tipografi
-- **Fizik Elementleri**: Particle system ve interaktif animasyonlar
-- **Responsive**: Tüm cihazlarda mükemmel görünüm
-- **Smooth Animations**: Scroll animasyonları ve hover efektleri
-- **Interactive Elements**: Mouse takibi ve ripple efektleri
-- **Performance Optimized**: Hızlı yükleme ve akıcı animasyonlar
+- **Modern Design**: Gradient colors and modern typography
+- **Physics Elements**: Particle system and interactive animations
+- **Responsive**: Perfect display on all devices
+- **Smooth Animations**: Scroll animations and hover effects
+- **Interactive Elements**: Mouse tracking and ripple effects
+- **Performance Optimized**: Fast loading and smooth animations
+- **Multilingual**: Support for Turkish, English, and German
 
-## 🛠️ Teknolojiler
+## 🛠️ Technologies
 
 - HTML5
 - CSS3 (Custom Properties, Grid, Flexbox)
 - Vanilla JavaScript (ES6+)
 - Canvas API (Particle System)
 - Font Awesome Icons
-- Google Fonts (Inter)
+- Google Fonts (Space Grotesk)
 
-## 📁 Dosya Yapısı
+## 📁 File Structure
 
 ```
 portfolio/
-├── index.html          # Ana HTML dosyası
-├── styles.css          # CSS stilleri
-├── script.js           # JavaScript fonksiyonları
-└── README.md          # Proje dokümantasyonu
+├── index.html          # Main HTML file
+├── styles.css          # CSS styles
+├── script.js           # JavaScript functions
+├── translations.js     # Internationalization
+├── profile.jpg         # Profile image
+├── cv-yigit-kutay-gulben.pdf  # CV file
+└── README.md          # Project documentation
 ```
 
-## 🎨 Özellikler Detayı
+## 🎨 Feature Details
 
 ### Particle System
-- Dinamik parçacık animasyonu
-- Mouse hareketlerine tepki
-- Bağlantı çizgileri
+- Dynamic particle animation
+- Responds to mouse movements
+- Connection lines between particles
 
-### Animasyonlar
-- Typing effect (yazı yazma efekti)
+### Animations
+- Typing effect for name
 - Scroll-triggered animations
-- Hover efektleri
+- Hover effects
 - Counter animations
 - Parallax scrolling
+- Fade-in animations
 
-### Interaktif Elementler
-- Magnetic buttons (manyetik butonlar)
-- Ripple effects (dalga efektleri)
+### Interactive Elements
+- Magnetic buttons
+- Ripple effects
 - Skill tooltips
 - Timeline interactions
+- Tech sphere with profile image
+- Language switcher
 
-## 🚀 Kurulum
+## 🚀 Installation
 
-1. Dosyaları bilgisayarınıza indirin
-2. `index.html` dosyasını bir web tarayıcısında açın
-3. Portfolyonuzu keşfedin!
+1. Download the files to your computer
+2. Open `index.html` in a web browser
+3. Explore the portfolio!
+
+### For Development
+```bash
+# Using Python
+python -m http.server 8000
+
+# Using Node.js (if http-server is installed)
+http-server
+
+# Using VS Code Live Server extension
+# Right-click index.html and select "Open with Live Server"
+```
 
 ## 📱 Responsive Design
 
@@ -62,40 +81,65 @@ portfolio/
 - Tablet: 768px - 1199px
 - Mobile: 320px - 767px
 
-## 🎯 Performans
+## 🎯 Performance
 
-- Lazy loading animasyonlar
+- Lazy loading animations
 - Optimized particle system
 - Smooth scrolling
 - Efficient event handling
+- Hardware acceleration
+- Reduced motion support
 
-## 🔧 Özelleştirme
+## 🌍 Internationalization
 
-### Renkler
-CSS custom properties kullanarak renkleri kolayca değiştirebilirsiniz:
+The portfolio supports three languages:
+- Turkish (default)
+- English
+- German
+
+Language preference is automatically detected from browser settings and stored in localStorage.
+
+## 🔧 Customization
+
+### Colors
+You can easily change colors using CSS custom properties:
 
 ```css
 :root {
-    --primary-color: #6366f1;
-    --secondary-color: #8b5cf6;
-    --accent-color: #06b6d4;
+    --primary: #6366f1;
+    --secondary: #ec4899;
+    --accent: #06b6d4;
 }
 ```
 
-### Animasyonlar
-JavaScript dosyasındaki timing değerlerini değiştirerek animasyon hızlarını ayarlayabilirsiniz.
+### Animations
+You can adjust animation speeds by changing timing values in the JavaScript file.
 
-## 📞 İletişim
+### Content
+Update the `translations.js` file to modify text content for all languages.
+
+## 🚀 Deployment
+
+This portfolio is designed to be deployed on static hosting platforms:
+
+- **GitHub Pages**: Perfect for free hosting
+- **Netlify**: Drag and drop deployment
+- **Vercel**: Fast deployment with optimizations
+- **Surge.sh**: Simple command-line deployment
+
+## 📞 Contact
 
 Yiğit Kutay Gülben
 - Email: yigitkg@gmail.com
 - Phone: +90 554 538 01 20
-- Location: İstanbul, Türkiye
+- Location: Istanbul, Turkey
+- LinkedIn: [yigitkutaygulben](https://www.linkedin.com/in/yigitkutaygulben/)
+- GitHub: [yigitkg](https://github.com/yigitkg)
 
-## 📄 Lisans
+## 📄 License
 
-Bu proje MIT lisansı altında lisanslanmıştır.
+This project is licensed under the MIT License.
 
 ---
 
-**Not**: Bu portfolyo modern web standartları kullanılarak oluşturulmuştur ve tüm modern tarayıcılarda çalışır. 
+**Note**: This portfolio is built using modern web standards and works on all modern browsers. It features a responsive design with smooth animations and interactive elements for an engaging user experience.
