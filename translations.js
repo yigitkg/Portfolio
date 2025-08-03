@@ -12,7 +12,7 @@ const translations = {
         hero_badge: "Software Engineer",
         hero_name_first: "Yiğit Kutay",
         hero_name_last: "Gülben",
-        hero_description: "Modern web teknolojileri ile yenilikçi çözümler geliştiren tutkulu bir yazılım mühendisi. React.js, Java, TypeScript ve daha fazlası ile geleceği şekillendiriyorum.",
+        hero_description: "Modern web teknolojileri ile yenilikçi çözümler geliştiren tutkulu bir yazılım mühendisi. React.js, Next.js, TypeScript ve daha fazlası ile geleceği şekillendiriyorum.",
         hero_stat_experience: "Yıl Deneyim",
         hero_stat_projects: "Proje", 
         hero_stat_technologies: "Teknoloji",
@@ -33,7 +33,7 @@ const translations = {
         about_level_advanced: "İleri Seviye",
         about_level_beginner: "Başlangıç",
         about_highlight1_title: "Modern Teknolojiler",
-        about_highlight1_desc: "React.js, TypeScript, Java ve daha fazlası ile güçlü uygulamalar geliştiriyorum.",
+        about_highlight1_desc: "React.js, Next.js, TypeScript ve daha fazlası ile güçlü uygulamalar geliştiriyorum.",
         about_highlight2_title: "Performans Odaklı",
         about_highlight2_desc: "Optimizasyon ve performans her zaman önceliğim. Hızlı ve verimli çözümler üretiyorum.",
         about_highlight3_title: "Takım Çalışması",
@@ -95,6 +95,7 @@ const translations = {
         contact_location_value: "İstanbul, Türkiye",
         
         // Footer
+        footer_tagline: "Modern teknolojilerle dijital deneyimler yaratmak",
         footer_contact: "İletişime Geç",
         footer_made_with: "Yapıldı",
         footer_coffee_text: "☕ Kahve ve sayısız hata ayıklama seanslarıyla güçlendirildi",
@@ -113,7 +114,7 @@ const translations = {
         hero_badge: "Software Engineer",
         hero_name_first: "Yiğit Kutay",
         hero_name_last: "Gülben",
-        hero_description: "A passionate software engineer developing innovative solutions with modern web technologies. Shaping the future with React.js, Java, TypeScript and more.",
+        hero_description: "A passionate software engineer developing innovative solutions with modern web technologies. Shaping the future with React.js, Next.js, TypeScript and more.",
         hero_stat_experience: "Years Experience",
         hero_stat_projects: "Projects",
         hero_stat_technologies: "Technologies",
@@ -134,7 +135,7 @@ const translations = {
         about_level_advanced: "Advanced",
         about_level_beginner: "Beginner",
         about_highlight1_title: "Modern Technologies",
-        about_highlight1_desc: "I develop powerful applications with React.js, TypeScript, Java and more.",
+        about_highlight1_desc: "I develop powerful applications with React.js, Next.js, TypeScript and more.",
         about_highlight2_title: "Performance Focused",
         about_highlight2_desc: "Optimization and performance are always my priority. I create fast and efficient solutions.",
         about_highlight3_title: "Team Collaboration",
@@ -196,6 +197,7 @@ const translations = {
         contact_location_value: "Istanbul, Turkey",
         
         // Footer
+        footer_tagline: "Crafting digital experiences with modern technologies",
         footer_contact: "Get In Touch",
         footer_made_with: "Made with",
         footer_coffee_text: "☕ Powered by coffee and countless debugging sessions",
@@ -214,7 +216,7 @@ const translations = {
         hero_badge: "Software Engineer",
         hero_name_first: "Yiğit Kutay",
         hero_name_last: "Gülben",
-        hero_description: "Ein leidenschaftlicher Software-Ingenieur, der innovative Lösungen mit modernen Web-Technologien entwickelt. Die Zukunft mit React.js, Java, TypeScript und mehr gestalten.",
+        hero_description: "Ein leidenschaftlicher Software-Ingenieur, der innovative Lösungen mit modernen Web-Technologien entwickelt. Die Zukunft mit React.js, Next.js, TypeScript und mehr gestalten.",
         hero_stat_experience: "Jahre Erfahrung",
         hero_stat_projects: "Projekte",
         hero_stat_technologies: "Technologien",
@@ -235,7 +237,7 @@ const translations = {
         about_level_advanced: "Fortgeschritten",
         about_level_beginner: "Anfänger",
         about_highlight1_title: "Moderne Technologien",
-        about_highlight1_desc: "Ich entwickle leistungsstarke Anwendungen mit React.js, TypeScript, Java und mehr.",
+        about_highlight1_desc: "Ich entwickle leistungsstarke Anwendungen mit React.js, Next.js, TypeScript und mehr.",
         about_highlight2_title: "Performance-orientiert",
         about_highlight2_desc: "Optimierung und Performance haben für mich immer Priorität. Ich erstelle schnelle und effiziente Lösungen.",
         about_highlight3_title: "Teamarbeit",
@@ -297,6 +299,7 @@ const translations = {
         contact_location_value: "Istanbul, Türkei",
         
         // Footer
+        footer_tagline: "Digitale Erlebnisse mit modernen Technologien schaffen",
         footer_contact: "Kontakt aufnehmen",
         footer_made_with: "Gemacht mit",
         footer_coffee_text: "☕ Angetrieben von Kaffee und unzähligen Debugging-Sessions",
