@@ -2124,19 +2124,27 @@ body {
 /* Skip to main content link for screen readers */
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: -100px;
     left: 6px;
     background: var(--primary);
     color: white;
-    padding: 8px;
+    padding: 8px 16px;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 8px;
     z-index: 100000;
-    transition: top 0.3s ease;
+    font-weight: 600;
+    font-size: 0.9rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
 }
 
 .skip-link:focus {
-    top: 6px;
+    top: 20px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 /* Smooth Scrolling */
